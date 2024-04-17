@@ -1,0 +1,104 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+input[type="text"], input[type="radio"],  input[type="date"]{
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+label {
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    color: #f99410;
+    margin-left: 5px;
+}
+
+
+body {
+    background-color: #e4e3e3;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.general {
+    max-height: 800px;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+
+p{
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    color: black;
+}
+
+input[type="text"], input[type="radio"],  input[type="date"]{
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.captcha{
+    border: 1px solid rgb(203, 201, 201);
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: white;
+    color: rgb(7, 7, 7);
+    width: 90%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+}
+input[type="checkbox"] {
+    transform: scale(1.5); 
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: #eaa42b;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background-color: #d1a215;
+}

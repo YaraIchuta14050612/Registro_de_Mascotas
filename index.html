@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de mascotas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo"><img src="img/logo.png" class="menu-icono" alt="" width="100px" height="100px"></a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#Requisitos">Requisitos</a></li>
+                    <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+                    <li><a href="consultas.html">Consultas de Animales Extraviados</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-content container">
+            <h1>Registro Nacional de Tenencia Responsable
+                de Mascotas y Animales de Compañía</h1>
+            <a href="ingresar.html" class="btn-1">Ingresar con cedula de identidad</a>
+        </div>
+    </header>
+    <div class="slideshow-container">
+        <br><br>
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="img/ia1.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="img/ia3.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="img/ia2.jpg" style="width:100%">
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+                
+                <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                </script>
+    <section>
+        <div class="container">
+            <form action="">
+                <a name="Requisitos"></a>
+                <h1>Requisitos</h1>
+                <p>Comprobante de Existencia para
+                    registro con dispositivo externo
+                    Mascotas y Animales de Compañía</p>
+                <h1>DATOS ANIMAL</h1>
+                <label for="">Nombre:</label>
+                <input type="text">
+                <label for="">Especie:</label>
+                <input type="radio" name="Especie"> Perro
+                <input type="radio" name="Especie"> Gato <br>
+                <label for="">Sexo:</label>
+                <input type="radio" name="Sexo"> Macho <input type="radio" name="Sexo"> Hembra
+                <label for="">Esterilizado</label> <input type="radio" name="Esterilizado"> Si <input type="radio"
+                    name="Esterilizado"> No
+                <label for="">Raza:</label><input type="text"><br>
+                <label for="">Fecha de naciemiento (DD/MM/AA):</label>
+                <input type="date">
+                <label for="">Color:</label><input type="text"><br>
+                <label for="">Modo de obtención:</label><input type="radio" name="Modo">Recogido
+                <input type="radio" name="Modo">Reubicación <input type="radio" name="Modo">Regalo <input type="radio"
+                    name="Modo"> Nacido en Casa <input type="radio" name="Modo">Compra <br>
+                <p>(*si su mascota es adoptada marque recogido o reubicado)</p><br>
+                <label for="">Razón Tenencia</label>
+                <input type="radio" name="razon">Compañía
+                <input type="radio" name="razon">Asistencia
+                <input type="radio" name="razon">Terapia
+                <input type="radio" name="razon">Trabajo
+                <input type="radio" name="razon">Seguridad
+                <input type="radio" name="razon">Deporte
+                <input type="radio" name="razon">Exposicion
+                <input type="radio" name="razon">Reproduccion
+                <input type="radio" name="razon">Caza
+                <h1> DATOS MÉDICO VETERINARIO o TÉCNICO VETERINARIO</h1>
+                <label for="">Nombres:</label><input type="text">
+                <label for="">Apellidos:</label><input type="text"><br>
+                <label for="">Rut:</label><input type="text">
+                <input type="radio" name="Rut"> Médico Veterinario
+                <input type="radio" name="Rut"> Técnico Veterinario <br>
+                <label for="">Comuna:</label><input type="text">
+                <label for="">Fecha de Procedimiento</label><input type="date">
+            </form>
+        </div>
+    </section>
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="img/logo.png" alt="Logo de SLee Dw">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Estudiante de la carrera de informatica, de primer semestre.</p>
+                <p>Estudiente de la materia de Programación Web INF-113</p>
+            </div>
+            <div class="box">
+                <h2>Redes Sociales</h2>
+                <div class="red-social">
+                    <a href="#">
+                        <i style='font-size:24px' class='fab'>&#xf09a;</i></a>
+                    <a href="#">
+                        <i style='font-size:24px' class='fab'>&#xf16d;</i></a>
+                    <a href="#">
+                        <i style='font-size:24px' class='fab'>&#xf099;</i></a>
+                    <a href="#">
+                        <i style="font-size:24px" class="fa">&#xf16a;</i></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2024 INF-113 Programacion Web I | Ichuta Sinka Yara Belen 14050612</small>
+        </div>
+    </footer>
+</body>
+
+</html>
